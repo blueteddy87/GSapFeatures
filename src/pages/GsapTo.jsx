@@ -12,23 +12,16 @@ const GsapTo = () => {
   const container = useRef(null);
 
   // Animacja wywoływana raz przy montowaniu komponentu
-  useGSAP(
-    () => {
-      gsap.to("#blue-box", {
-        x: 250,
-        repeat: -1,
-        yoyo: true,
-        rotation: 360,
-        duration: 2,
-        ease: "elastic.out(1, 0.3),",
-      });
-    },
-    {
-      scope: container,
-      // dependencies: [],       // domyślnie [] — animation uruchomi się tylko raz
-      // revertOnUpdate: false   // domyślnie false — nie czyści animacji przy aktualizacji
-    }
-  );
+  useGSAP(() => {
+    gsap.to("#blue-box", {
+      x: 250,
+      repeat: -1,
+      yoyo: true,
+      rotation: 360,
+      duration: 2,
+      ease: "elastic.out(1, 0.3),",
+    });
+  });
 
   return (
     <main ref={container}>

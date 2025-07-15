@@ -77,6 +77,7 @@ const GsapTimeline = () => {
             // } else {
             //   timeline.play();
             // }
+            //alternatywne rozwiązanie
 
             if (timeline.paused()) {
               timeline.play();
